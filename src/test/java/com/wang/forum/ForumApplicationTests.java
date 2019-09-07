@@ -12,5 +12,4 @@ public class ForumApplicationTests {
     @Test
     public void contextLoads() {
     }
-
 }
