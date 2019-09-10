@@ -1,4 +1,4 @@
-package com.wang.forum.Provider;
+package com.wang.forum.provider;
 
 import com.alibaba.fastjson.JSON;
 import com.wang.forum.dto.AccessTokenDTO;
@@ -39,7 +39,7 @@ public class GithubProvider {
             Response response = client.newCall(request).execute();
             String string = response.body().string();
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
-            System.out.println(string );
+            System.out.println(string);
             return githubUser;
         } catch (IOException e) {
         }

@@ -1,14 +1,13 @@
-package com.wang.forum.Controller;
+package com.wang.forum.controller;
 
-import com.wang.forum.Provider.GithubProvider;
+import com.wang.forum.model.User;
+import com.wang.forum.provider.GithubProvider;
 import com.wang.forum.dto.AccessTokenDTO;
 import com.wang.forum.dto.GithubUser;
 import com.wang.forum.mapper.UserMapper;
-import com.wang.forum.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -51,7 +50,7 @@ public class AuthorizeController {
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
-            user.setGmtModified(System.currentTimeMillis());
+            user.setGmtModified(user.getGmtModified());
             userMapper.insert(user);
             request.getSession().setAttribute("user", githubUser);
             return "redirect:/";

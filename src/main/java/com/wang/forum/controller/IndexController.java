@@ -1,4 +1,4 @@
-package com.wang.forum.Controller;
+package com.wang.forum.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
