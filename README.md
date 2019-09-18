@@ -14,6 +14,8 @@
 ##Tool
 [flyway](https://flaywaydb.org)
 
+[Lombok](https://projectlombok.org/)
+
 ##script
 ```sql
 create table USER
