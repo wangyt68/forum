@@ -7,7 +7,7 @@ public class GithubUser {
     private String name;
     private Long id;
     private String bio;
-    private String avatar_url;
+    private String avatarUrl;
 
     public String getName() {
         return name;
@@ -33,12 +33,12 @@ public class GithubUser {
         this.bio = bio;
     }
 
-    public String getAvatar_url() {
-        return avatar_url;
+    public String getAvatarUrl() {
+        return avatarUrl;
     }
 
-    public void setAvatar_url(String avatar_url) {
-        this.avatar_url = avatar_url;
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 
     @Override
