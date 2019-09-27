@@ -14,6 +14,15 @@ public class PaginationDTO {
     private  boolean showEndPage;
     private  Integer page;
     private List<Integer> pages = new ArrayList<>();
+    private Integer totalPage;
+
+    public Integer getTotalPage() {
+        return totalPage;
+    }
+
+    public void setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+    }
 
     public List<QuestionDTO> getQuestions() {
         return questions;
@@ -73,8 +82,6 @@ public class PaginationDTO {
 
     public void setPagination(Integer totalCount, Integer page, Integer size) {
 
-        this.page = page;
-        Integer totalPage;
         if (totalCount % size == 0) {
             totalPage = totalCount / size;
         } else {
@@ -88,6 +95,7 @@ public class PaginationDTO {
         if (page > totalPage) {
             page = totalPage;
         }
+        this.page = page;
 
         pages.add(page);
         for (int i = 1; i <= 3; i++) {
@@ -104,14 +112,14 @@ public class PaginationDTO {
         if (page == 1) {
             showPrevious = false;
         } else {
-            showNext = true;
+            showPrevious = true;
         }
 
         //是否展示下一页
         if (page.equals(totalPage)) {
             showNext = false;
         } else {
-            showPrevious = true;
+            showNext = true;
         }
 
         //是否展示第一页
