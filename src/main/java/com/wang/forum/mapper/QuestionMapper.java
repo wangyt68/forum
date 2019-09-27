@@ -3,8 +3,10 @@ package com.wang.forum.mapper;
 import com.wang.forum.model.Question;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -16,7 +18,7 @@ public interface QuestionMapper {
     void create(Question question);
 
     @Select("select * from question limit #{offset}, #{size}")
-    List<Question> list(Integer offset, Integer size);
+    List<Question> list(@Param(value = "offset") Integer offset, @Param(value = "size") Integer size);
 
     @Select("select count(1) from question")
     Integer count();
