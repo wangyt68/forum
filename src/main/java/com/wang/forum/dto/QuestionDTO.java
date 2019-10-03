@@ -3,6 +3,9 @@ package com.wang.forum.dto;
 import com.wang.forum.model.User;
 import lombok.Data;
 
+/**
+ * @author de'l'l
+ */
 @Data
 public class QuestionDTO {
 
