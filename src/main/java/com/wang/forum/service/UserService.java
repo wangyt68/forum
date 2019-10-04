@@ -1,5 +1,6 @@
 package com.wang.forum.service;
 
+<<<<<<< HEAD
 import com.wang.forum.mapper.UserMapper;
 import com.wang.forum.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,4 +30,7 @@ public class UserService {
         }
 
     }
+=======
+public class UserService {
+>>>>>>> ac729abbe915c8b738322faaf5b634b68293f55d
 }

@@ -31,5 +31,9 @@ public interface QuestionMapper {
 
     @Select("select * from user where id = #{id}")
     Question getById(@Param("id") Integer id);
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> ac729abbe915c8b738322faaf5b634b68293f55d

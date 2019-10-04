@@ -24,4 +24,8 @@ public class QuestionController {
         model.addAttribute("question", questionDTO);
         return "question";
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ac729abbe915c8b738322faaf5b634b68293f55d
