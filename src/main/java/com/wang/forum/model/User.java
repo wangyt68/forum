@@ -6,6 +6,7 @@ import lombok.Data;
  * @author de'l'l
  */
 
+
 @Data
 public class User {
     private Integer id;

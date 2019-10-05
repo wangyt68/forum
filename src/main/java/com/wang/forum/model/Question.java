@@ -2,6 +2,9 @@ package com.wang.forum.model;
 
 import lombok.Data;
 
+/**
+ * @author de'l'l
+ */
 @Data
 public class Question {
     private Integer id;
@@ -14,6 +17,7 @@ public class Question {
     private Integer viewCount;
     private Integer commentCount;
     private Integer likeCount;
+
 
     public Integer getId() {
         return id;
@@ -94,4 +98,5 @@ public class Question {
     public void setLikeCount(Integer likeCount) {
         this.likeCount = likeCount;
     }
+
 }
