@@ -1,10 +1,7 @@
 package com.wang.forum.mapper;
 
 import com.wang.forum.model.Question;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -29,7 +26,9 @@ public interface QuestionMapper {
     @Select("select count(1) from question where creator = #{userId}")
     Integer countByUserId(@Param("userId") Integer userId);
 
-    @Select("select * from user where id = #{id}")
+    @Select("select * from question where id = #{id}")
     Question getById(@Param("id") Integer id);
 
+    @Update("update question set title = #{title}, description = #{description}, gmt_modified = #{gmtModified}, tag = #{tag} where id = #{id}")
+    void update(Question question);
 }
